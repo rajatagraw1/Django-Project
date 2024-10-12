@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "app_cost_calculator/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "app_cost_calculator/wsgi.py" }
+  ]
+}
